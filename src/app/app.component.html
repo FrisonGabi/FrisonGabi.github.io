@@ -1,21 +1,39 @@
+  <div class="menu-mobile">
+    <div class="btn">
+      <button (click)="menu()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div class="ul">
+        <ul *ngIf="menuActive">
+        <li>Sobre mi</li>
+        <li>Habilidades</li>
+        <li>Portafolio</li>
+        <li>Contacto</li>
+      </ul>
+    </div>
+
+  </div>
 
 <div class="bg">
   <div class="menu">
     <ul>
-      <li>About me</li>
-      <li>Skills</li>
-      <li>Portfolio</li>
-      <li>Contact</li>
+      <li>Sobre mi</li>
+      <li>Habilidades</li>
+      <li>Portafolio</li>
+      <li>Contacto</li>
     </ul>
   </div>
+
+
 
 
 
   <div class="about">
     
     <div class="text">
-      <h1>Hi! </h1>
-      <h2>My name is Gabriel Frison.  <span>Front-End developer</span></h2>
+      <h1>Hola! </h1>
+      <h2>Me llamo Gabriel Frison.  <span>Front-End developer</span></h2>
       
       
       <p>Tengo 23 años y soy desarrollador front-end junior.<br> 
@@ -37,7 +55,7 @@
   <div class="skills">
 
   <div class="my-skills">
-    <h1>Skills</h1>
+    <h1>Habilidades</h1>
 
     <div class="center-skills">
 
@@ -91,7 +109,7 @@
   </div>  
 
   <div class="my-skills">
-    <h1>Tools</h1>
+    <h1>Herramientas</h1>
 
     <div class="center-skills">
 
@@ -135,7 +153,7 @@
 
 
 <div class="container-portfolio">
-  <h1>My personal projects</h1>
+  <h1>Mis proyectos personales</h1>
   <div class="portfolio">
     
     <div class="project">
@@ -152,7 +170,7 @@
     <div class="project">
 
       <figure>
-        <img src="assets/projects/heroes.gif" alt="">
+        <img src="assets/projects/equilibre.gif" alt="">
         <div class="github">
           <a href="">Repositorio</a>
         </div>
@@ -163,7 +181,7 @@
     <div class="project">
 
       <figure>
-        <img src="assets/projects/heroes.gif" alt="">
+        <img src="assets/projects/futbol.gif" alt="">
         <div class="github">
           <a href="">Repositorio</a>
         </div>
@@ -174,7 +192,7 @@
     <div class="project">
 
       <figure>
-        <img src="assets/projects/heroes.gif" alt="">
+        <img src="assets/projects/paises.gif" alt="">
         <div class="github">
           <a href="">Repositorio</a>
         </div>
@@ -185,7 +203,7 @@
     <div class="project">
 
       <figure>
-        <img src="assets/projects/heroes.gif" alt="">
+        <h2>Proximamente...</h2>
         <div class="github">
           <a href="">Repositorio</a>
         </div>
@@ -196,15 +214,14 @@
     <div class="project">
 
       <figure>
-        <img src="assets/projects/heroes.gif" alt="">
+        <h2>Proximamente...</h2>
         <div class="github">
           <a href="">Repositorio</a>
         </div>
       </figure>
 
     </div>
-
-
+  
 
 
   </div>
@@ -213,7 +230,7 @@
 
 
   <div class="container-contact">
-    <h1>Contact Me...</h1>
+    <h1>Contactame...</h1>
     <div class="contact">
       
     </div>
