@@ -6,10 +6,10 @@
     </div>
     <div class="ul">
         <ul *ngIf="menuActive">
-        <li>Sobre mi</li>
-        <li>Habilidades</li>
-        <li>Portafolio</li>
-        <li>Contacto</li>
+        <li (click)="about()" >Sobre mi</li>
+        <li (click)="skills()">Habilidades</li>
+        <li (click)="portfolio()">Portafolio</li>
+        <li (click)="contact()">Contacto</li>
       </ul>
     </div>
 
@@ -18,10 +18,10 @@
 <div class="bg">
   <div class="menu">
     <ul>
-      <li>Sobre mi</li>
-      <li>Habilidades</li>
-      <li>Portafolio</li>
-      <li>Contacto</li>
+      <li (click)="about()" >Sobre mi</li>
+      <li (click)="skills()">Habilidades</li>
+      <li (click)="portfolio()">Portafolio</li>
+      <li (click)="contact()">Contacto</li>
     </ul>
   </div>
 
@@ -29,18 +29,16 @@
 
 
 
-  <div class="about">
+  <div class="about" id="about">
     
     <div class="text">
       <h1>Hola! </h1>
-      <h2>Me llamo Gabriel Frison.  <span>Front-End developer</span></h2>
+      <h2>Me llamo Gabriel Frison.  <br><span>Front-End developer...</span></h2>
       
-      
-      <p>Tengo 23 años y soy desarrollador front-end junior.<br> 
-         Estudie programación en el instituto superior pascal, Córdoba, Argentina. Y<br> 
-         actualmente sigo aprendiendo por mi cuenta realizando proyectos personales y conociendo más tecnologías</p>
-
-        <li routerLink="">Descargar CV</li>
+      <p>Tengo 23 años, soy desarrollador front-end junior.<br> 
+        Estudie programación en el Instituto Superior Pascal, Córdoba, Argentina.<br> 
+        Actualmente sigo aprendiendo de manera autodidacta realizando proyectos personales y estudiando más tecnologías.</p>
+        <a href="assets/CV_GabrielFrison.pdf" download >Descargar CV</a>
       
       
     </div>
@@ -52,7 +50,7 @@
 </div>
 
 
-  <div class="skills">
+  <div class="skills" id="skills">
 
   <div class="my-skills">
     <h1>Habilidades</h1>
@@ -152,16 +150,16 @@
 
 
 
-<div class="container-portfolio">
+<div class="container-portfolio"id="portfolio">
   <h1>Mis proyectos personales</h1>
-  <div class="portfolio">
+  <div class="portfolio" >
     
     <div class="project">
 
       <figure>
         <img src="assets/projects/heroes.gif" alt="">
         <div class="github">
-          <a href="">Repositorio</a>
+          <a href="" target="_blank">Repositorio</a>
         </div>
       </figure>
 
@@ -172,7 +170,7 @@
       <figure>
         <img src="assets/projects/equilibre.gif" alt="">
         <div class="github">
-          <a href="">Repositorio</a>
+          <a href="https://github.com/FrisonGabi/Equilibre" target="_blank">Repositorio</a>
         </div>
       </figure>
 
@@ -183,7 +181,7 @@
       <figure>
         <img src="assets/projects/futbol.gif" alt="">
         <div class="github">
-          <a href="">Repositorio</a>
+          <a href="https://github.com/FrisonGabi/ReSports" target="_blank">Repositorio</a>
         </div>
       </figure>
 
@@ -194,7 +192,7 @@
       <figure>
         <img src="assets/projects/paises.gif" alt="">
         <div class="github">
-          <a href="">Repositorio</a>
+          <a href="" target="_blank">Repositorio</a>
         </div>
       </figure>
 
@@ -205,7 +203,7 @@
       <figure>
         <h2>Proximamente...</h2>
         <div class="github">
-          <a href="">Repositorio</a>
+          <a href="" >Repositorio</a>
         </div>
       </figure>
 
@@ -229,13 +227,35 @@
 </div>
 
 
-  <div class="container-contact">
-    <h1>Contactame...</h1>
-    <div class="contact">
-      
-    </div>
+<div class="container-contact">
+  <h1>Contacto</h1>
+  <div class="contact" id="contact">
+    <form [formGroup]="miFormulario" (submit)="enviar($event)" >
+      <label for="">Nombre</label>
+      <input formControlName="from_name" name="from_name">
+      <span *ngIf="campoValido('from_name')">Requerido</span>
+
+      <label for="">Email</label>
+      <input formControlName="user_email" name="user_email">
+      <span *ngIf="campoValido('user_email')">Requerido</span>
+
+      <label for="">Mensaje</label>
+      <textarea formControlName="message" name="message"></textarea>
+      <span *ngIf="campoValido('message')">Requerido</span>
+
+      <button type="submit">Enviar</button>
+    </form>
   </div>
+</div>
 
 
-
+<div class="footer">
+  <div class="social">
+    <a href="https://www.instagram.com/frisongabi" target="_blank"><img src="assets/contact/instagram.png" alt=""></a> 
+    <a href="https://www.linkedin.com/in/gabriel-frison-5ab551189" target="_blank"><img src="assets/contact/linkedin.png" alt=""></a> 
+    <a href="https://twitter.com/FrisonGabi" target="_blank"><img src="assets/contact/twitter.png" alt=""></a> 
+    <a href="https://wa.me/5493541530845?text=Hola!" target="_blank"><img src="assets/contact/whatsapp.png"  alt=""></a> 
+  </div>
+  <p>Hecho por <a href="https://github.com/frisongabi" target="_blank">Gabriel Frison</a> - 2022</p>
+</div>
 

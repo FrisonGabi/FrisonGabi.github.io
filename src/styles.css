@@ -8,7 +8,8 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    text-decoration: none
+    text-decoration: none;
+    outline:none;
 }
 
 html, body {
@@ -69,8 +70,8 @@ body {
     padding: 10px;
 }
 .btn button {
-    background-color: var(--stark);
     height: 28px;
+    border-radius: 4px;
 }
 
 .menu-mobile ul {
@@ -126,7 +127,7 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--stark);
-    box-shadow: 0 6px 6px 0 rgba(0,0,0,.8);
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,.8);
 }
 
 
@@ -143,7 +144,8 @@ body {
     font-size: 18px;
     font-weight: 600;
 }
-.text li {
+.text a {
+    color: var(--stark);
     margin-top: 50px;
     float: right;
     cursor: pointer;
@@ -239,7 +241,7 @@ body {
     background-color: var(--void);
     text-align: center;
     padding: 50px;
-    box-shadow: 0 6px 6px 0 rgba(0,0,0,.8);
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,.8);
     position: relative;
 }
 .container-portfolio h1 {
@@ -354,11 +356,86 @@ body {
     padding: 20px;
 }
 .contact {
-    height: 500px;
-
+    margin: auto;
+    border-radius: 6px;
+    padding: 20px;
+    max-width: 700px;
 }
 
+.contact form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 20px;
+}
 
+.contact form label {
+    text-align: start;
+    margin-top: 10px;
+}
 
+.contact form input {
+    border-radius: 4px;
+    padding: 5px;
+    border: none;
+    border: 1px solid var(--void);
+}
 
+.contact form textarea {
+    border-radius: 4px;
+    border: 1px solid var(--void);
+    resize: none;
+    height: 150px;
+    padding: 10px;
+}
+
+.contact span {
+    color: rgb(255, 0, 0);
+    text-align: end;
+    height: 0;
+}
+
+.contact button {
+    color: #fff;
+    font-weight: bold;
+    width: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--void);
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.2);
+}
+
+.footer {
+    padding: 20px;
+    background-color: var(--stark);
+    text-align: center;
+}
+.footer a {
+    color: #0400ff;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+.social a {
+    transition: ease-in-out 0.2s;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+}
+
+.social img {
+    width: 35px;
+    height: 35px;
+
+}
 
